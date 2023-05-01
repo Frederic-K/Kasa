@@ -1,0 +1,18 @@
+.footer {
+  &__container {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    bottom: 0px;
+    &--logo {
+      margin: 2rem 0rem 2rem 0rem;
+    }
+    &--title {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
