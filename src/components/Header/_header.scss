@@ -1,21 +1,19 @@
 .header {
   &__container {
     max-width: 1240px;
-    height: 68px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
     padding-top: 40px;
   }
   &__logo {
-    width: 210px;
-    height: 68px;
+    margin: 0px;
   }
   &__nav {
     display: flex;
     align-items: center;
     gap: 57px;
+    margin-right: 0;
     font-size: 24px;
     .nav__link {
       text-decoration: none;

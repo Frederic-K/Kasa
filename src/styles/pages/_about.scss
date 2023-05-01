@@ -1,0 +1,12 @@
+.main {
+  &__aboutBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 68px;
+    img {
+      width: 100%;
+      max-width: 1240px;
+    }
+  }
+}

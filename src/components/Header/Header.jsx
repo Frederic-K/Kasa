@@ -5,8 +5,8 @@ import Logo from '../../assets/logo/KASA_LOGO_red.svg'
 function Header() {
   return (
     <header className="header__container">
-      <NavLink to="/">
-        <img className="header__logo" src={Logo} alt="Logo Kasa" />
+      <NavLink to="/" className="header__logo">
+        <img src={Logo} alt="Logo Kasa" />
       </NavLink>
       <nav className="header__nav">
         <NavLink

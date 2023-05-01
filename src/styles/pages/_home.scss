@@ -2,16 +2,15 @@
   //   display: flex;
   //   justify-content: center;
   //   align-items: center;
-  &__banner {
+  &__homeBanner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 68px;
-    &--home {
-      position: relative;
-      img {
-        width: 100%;
-      }
+    position: relative;
+    img {
+      width: 100%;
+      max-width: 1240px;
     }
     &--homeTitle {
       position: absolute;
@@ -21,7 +20,7 @@
       font-size: 48px;
       font-weight: 500;
       top: 50px;
-      left: 265px;
+      left: 400;
     }
   }
 }
