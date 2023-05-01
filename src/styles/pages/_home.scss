@@ -1,0 +1,23 @@
+.main {
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 68px;
+    margin-left: 100px;
+    margin-right: 100px;
+    &--home {
+      position: relative;
+    }
+    &--homeTitle {
+      position: absolute;
+      color: white;
+      width: 710px;
+      height: 68px;
+      font-size: 48px;
+      font-weight: 500;
+      top: 50px;
+      left: 265px;
+    }
+  }
+}
