@@ -1,13 +1,17 @@
 .main {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
   &__banner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 68px;
-    margin-left: 100px;
-    margin-right: 100px;
     &--home {
       position: relative;
+      img {
+        width: 100%;
+      }
     }
     &--homeTitle {
       position: absolute;

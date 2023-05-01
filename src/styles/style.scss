@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-@import '../styles/utils/variables';
+@import '../styles/utils/variables', '../styles/utils/mixins';
 
 @import '../components/Header/header', '../components/Footer/footer';
 
