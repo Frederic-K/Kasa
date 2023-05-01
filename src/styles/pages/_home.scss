@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 68px;
     position: relative;
     img {
       width: 100%;
@@ -15,12 +14,8 @@
     &--homeTitle {
       position: absolute;
       color: white;
-      width: 710px;
-      height: 68px;
-      font-size: 48px;
+      font-size: 2.5rem;
       font-weight: 500;
-      top: 50px;
-      left: 400;
     }
   }
 }

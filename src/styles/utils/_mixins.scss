@@ -1,0 +1,25 @@
+@mixin errorPage {
+  .main {
+    &__errorPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &--type {
+        font-size: 16rem;
+        font-weight: 700;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+      }
+      &--title {
+        font-size: 2rem;
+        text-align: center;
+      }
+      &--link {
+        font-size: 1rem;
+        padding-top: 10rem;
+        text-decoration: underline;
+      }
+    }
+  }
+}

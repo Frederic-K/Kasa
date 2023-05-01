@@ -15,7 +15,7 @@ function Header() {
             isActive ? 'nav__link--active' : 'nav__link'
           }
         >
-          Home
+          Accueil
         </NavLink>
         <NavLink
           to="/about"
