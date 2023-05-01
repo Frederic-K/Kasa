@@ -2,6 +2,8 @@
 
 @import '../styles/utils/variables';
 
-@import '../components/Header/header';
+@import '../components/Header/header', '../components/Footer/footer';
 
 @import './base/base', './base/typo';
+
+@import './pages/home', './pages/accomodation', './pages/about', './pages/404';
