@@ -23,3 +23,103 @@
     }
   }
 }
+
+@mixin homeBanner-tab {
+  @media screen and (max-width: 768px) {
+    max-width: 748px;
+    &--title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@mixin homeBanner-mobile {
+  @media screen and (max-width: 320px) {
+    justify-content: flex-start;
+    &--img {
+      display: none;
+    }
+    &--imgMobile {
+      max-width: 300px;
+      display: flex;
+    }
+    &--title {
+      margin-left: 25px;
+      font-size: 1.3rem;
+      &--breack {
+        display: flex;
+      }
+    }
+  }
+}
+
+@mixin footer-tab {
+  @media screen and (max-width: 768px) {
+    max-width: 748px;
+  }
+}
+
+@mixin footer-mobile {
+  @media screen and (max-width: 320px) {
+    max-width: 300px;
+    height: 150px;
+    gap: 15px;
+    &--logo {
+      width: 100px;
+      margin: 0px;
+    }
+    &--title {
+      font-size: 0.7rem;
+      margin: 0px;
+    }
+  }
+}
+
+@mixin header-tab {
+  @media screen and (max-width: 768px) {
+    max-width: 748px;
+    &__container {
+      margin: 10px;
+      padding: 0px;
+    }
+  }
+}
+
+@mixin header-mobile {
+  @media screen and (max-width: 320px) {
+    &__container {
+      margin: 10px;
+      padding: 0px;
+    }
+    &__logo {
+      img {
+        width: 120px;
+      }
+    }
+    &__nav {
+      font-size: 0.9rem;
+      gap: 10px;
+    }
+  }
+}
+
+@mixin medium {
+  $breakpoints: (
+    medium: 768px,
+  );
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    max-width: 748px;
+    @content;
+  }
+}
+
+@mixin small {
+  $breakpoints: (
+    small: 320px,
+  );
+  @media screen and (max-width: map-get($breakpoints, small)) {
+    max-width: 300px;
+    width: 300px;
+    @content;
+  }
+}

@@ -2,6 +2,8 @@
 
 @import '../styles/utils/variables', '../styles/utils/mixins';
 
+@import '../styles/components/bannerHome';
+
 @import '../components/Header/header', '../components/Footer/footer';
 
 @import './base/base', './base/typo';

@@ -23,4 +23,28 @@
       }
     }
   }
+  // @include header-tab;
+  // @include header-mobile;
+  @include medium {
+    max-width: 748px;
+    &__container {
+      margin: 10px;
+      padding: 0px;
+    }
+  }
+  @include small {
+    &__container {
+      margin: 10px;
+      padding: 0px;
+    }
+    &__logo {
+      img {
+        width: 120px;
+      }
+    }
+    &__nav {
+      font-size: 0.9rem;
+      gap: 10px;
+    }
+  }
 }

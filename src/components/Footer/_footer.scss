@@ -14,5 +14,20 @@
       color: white;
       margin-bottom: 1.5rem;
     }
+    // @include footer-tab;
+    // @include footer-mobile;
+    @include small {
+      height: 150px;
+      gap: 15px;
+      &--logo {
+        width: 100px;
+        margin: 0px;
+      }
+      &--title {
+        font-size: 0.7rem;
+        margin: 0px;
+      }
+    }
+    @include medium;
   }
 }

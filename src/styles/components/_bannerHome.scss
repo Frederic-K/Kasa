@@ -1,0 +1,26 @@
+.main {
+  &__homeBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &--img {
+      width: 100%;
+      max-width: 1240px;
+    }
+    &--imgMobile {
+      display: none;
+    }
+    &--title {
+      position: absolute;
+      color: white;
+      font-size: 3rem;
+      font-weight: 500;
+      &--breack {
+        display: none;
+      }
+    }
+    @include homeBanner-tab;
+    @include homeBanner-mobile;
+  }
+}
