@@ -1,7 +1,12 @@
 import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
+import Loader from '../components/Loader/Loader'
+import Gallery from '../components/Gallery/Gallery'
+import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
 
 function Home() {
+  const { isLoading, data, error } = useGetAccomodationData()
+
   return (
     <main>
       <div className="main__homeBanner">
@@ -20,6 +25,20 @@ function Home() {
           partout et ailleurs
         </h1>
       </div>
+      <section className="main__gallery">
+        {error && (
+          <div className="main__gallery--errorMsg">
+            Une erreur s'est produite !
+          </div>
+        )}
+        {isLoading ? (
+          <div className="loader-center">
+            <Loader />
+          </div>
+        ) : (
+          <Gallery accomodation={data} />
+        )}
+      </section>
     </main>
   )
 }

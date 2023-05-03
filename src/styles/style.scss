@@ -2,7 +2,8 @@
 
 @import '../styles/utils/variables', '../styles/utils/mixins';
 
-@import '../styles/components/bannerHome';
+@import '../styles/components/bannerHome', '../components/Loader/loader',
+  '../../src/components/Gallery/gallery';
 
 @import '../components/Header/header', '../components/Footer/footer';
 
