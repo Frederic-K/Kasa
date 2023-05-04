@@ -5,7 +5,7 @@ function Gallery({ data }) {
     <section className="main__gallery--cards">
       {data.map((card) => (
         <Card
-          key={`${card.id}`}
+          key={`card-${card.id}`}
           id={`${card.id}`}
           cover={card.cover}
           title={card.title}
