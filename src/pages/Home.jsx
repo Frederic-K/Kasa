@@ -1,16 +1,18 @@
+import { NavLink } from 'react-router-dom'
 import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
-import Loader from '../components/Loader/Loader'
-import Gallery from '../components/Gallery/Gallery'
+// import Loader from '../components/Loader/Loader'
+// import Gallery from '../components/Gallery/Gallery'
 import Footer from '../components/Footer/Footer'
-//import { useGetAccomodationData } from '../utils/hooks/getDataAccomodation'
-import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
+// import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
+import accomodations from '../data/logements.json'
+import Cardv2 from '../components/Card/Cardv2'
 
 function Home() {
-  const { isLoading, data, error } = useGetAccomodationData()
-  console.log('error', error)
-  console.log('isLoading', isLoading)
-  console.log('data', data)
+  // const { isLoading, data, error } = useGetAccomodationData()
+  // console.log('error', error)
+  // console.log('isLoading', isLoading)
+  // console.log('data', data)
   return (
     <div>
       <main>
@@ -31,17 +33,19 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {/* {error && (
-            <div className="main__gallery--errorMsg">
-              Oups ! Une erreur s'est produite ...
-            </div>
-          )} */}
-          {isLoading && (
-            <div className="loader-center">
-              <Loader />
-            </div>
-          )}
-          {!error && !isLoading && data && <Gallery data={data} />}
+          {accomodations.map((card) => (
+            <NavLink
+              className="main__gallery--card"
+              key={`${card.id}`}
+              to={`/accomodation/${card.id}`}
+            >
+              <Cardv2
+                key={`${card.id}`}
+                cover={card.cover}
+                title={card.title}
+              />
+            </NavLink>
+          ))}
         </section>
       </main>
       <Footer />

@@ -22,7 +22,7 @@
 //   return (
 //     <ul className="gallery">
 //       {data.map((card) => (
-//         <NavLink to={'/accomodation/' + card.id} key={card.id}>
+//         <NavLink to={'/accomodation/${card.id}'} key={card.id}>
 //           <li className="gallery__card">
 //             <img
 //               className="gallery__card--cover"
