@@ -20,7 +20,7 @@
 
 // function Gallery({ data }) {
 //   return (
-//     <ul className="thumbnail">
+//     <ul className="gallery">
 //       {data.map((card) => (
 //         <NavLink to={'/accomodation/' + card.id} key={card.id}>
 //           <li className="gallery__card">

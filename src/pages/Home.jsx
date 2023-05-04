@@ -31,19 +31,11 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {/* {error ? (
+          {/* {error && (
             <div className="main__gallery--errorMsg">
               Oups ! Une erreur s'est produite ...
             </div>
-          ) : (
-            <Gallery accomodation={data} />
           )} */}
-          {/* {isLoading ? <Loader /> : <Gallery accomodation={data} />} */}
-          {error && (
-            <div className="main__gallery--errorMsg">
-              Oups ! Une erreur s'est produite ...
-            </div>
-          )}
           {isLoading && (
             <div className="loader-center">
               <Loader />
