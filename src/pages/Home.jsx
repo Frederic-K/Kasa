@@ -49,7 +49,7 @@ function Home() {
               <Loader />
             </div>
           )}
-          {!error && !isLoading && data && <Gallery accomodation={data} />}
+          {!error && !isLoading && data && <Gallery data={data} />}
         </section>
       </main>
       <Footer />

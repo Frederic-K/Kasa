@@ -1,17 +1,42 @@
-import Card from '../Card/Card'
+//import Card from '../Card/Card'
 
-function Gallery({ accomodation }) {
-  return (
-    <main>
-      <section className="gallery">
-        <ul className="gallery__thumb">
-          {accomodation.map((card) => (
-            <Card key={card.id} card={card} />
-          ))}
-        </ul>
-      </section>
-    </main>
-  )
-}
+// function Gallery({ data }) {
+//   return (
+//     <main>
+//       <section className="gallery">
+//         <ul className="gallery__thumb">
+//           {data.map((accomodation) => (
+//             <Card key={accomodation.id} accomodation={accomodation} />
+//           ))}
+//         </ul>
+//       </section>
+//     </main>
+//   )
+// }
 
-export default Gallery
+// export default Gallery
+
+// import { NavLink } from 'react-router-dom'
+
+// function Gallery({ data }) {
+//   return (
+//     <ul className="thumbnail">
+//       {data.map((card) => (
+//         <NavLink to={'/accomodation/' + card.id} key={card.id}>
+//           <li className="gallery__card">
+//             <img
+//               className="gallery__card--cover"
+//               src={card.cover}
+//               alt={card.title}
+//             />
+//             <div className="gallery__card--title">
+//               <h2>{card.title}</h2>
+//             </div>
+//           </li>
+//         </NavLink>
+//       ))}
+//     </ul>
+//   )
+// }
+
+// export default Gallery

@@ -1,4 +1,3 @@
-// import { useFetch } from './getData'
 import useFetch from './getData'
 
 function useGetAccomodationData() {
