@@ -1,22 +1,20 @@
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-// function Card({ accomodation }) {
-//   const { id, title, cover } = accomodation
+function Card({ id, cover, title }) {
+  return (
+    <article className="card__accomodation">
+      <NavLink className="card__acccomodation--link" to={`/accomodation/${id}`}>
+        <img
+          className="card__accomodation--img"
+          src={cover}
+          alt={`Lien vers l'hébergement ${title}`}
+        />
+        <div className="card__accomodation--caption">
+          <h3>{title}</h3>
+        </div>
+      </NavLink>
+    </article>
+  )
+}
 
-//   return (
-//     <NavLink to={`/acccomodation/${id}`}>
-//       <li className="gallery__card">
-//         <div>
-//           <img
-//             className="gallery__card--cover"
-//             src={cover}
-//             alt={`Location ${title}`}
-//           />
-//           <span className="gallery__card--title">{title}</span>
-//         </div>
-//       </li>
-//     </NavLink>
-//   )
-// }
-
-// export default Card
+export default Card

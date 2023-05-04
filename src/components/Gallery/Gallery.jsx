@@ -1,11 +1,11 @@
 import accomodations from '../../data/logements.json'
-import Cardv2 from '../Card/Cardv2'
+import Card from '../Card/Card'
 
 function Gallery() {
   return (
     <section className="main__gallery--cards">
       {accomodations.map((card) => (
-        <Cardv2
+        <Card
           key={`${card.id}`}
           id={`${card.id}`}
           cover={card.cover}
