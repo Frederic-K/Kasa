@@ -3,7 +3,6 @@ import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
 import Loader from '../components/Loader/Loader'
 import Gallery from '../components/Gallery/Gallery'
 import Footer from '../components/Footer/Footer'
-//import { useGetAccomodationData } from '../utils/hooks/getDataAccomodation'
 import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
 
 function Home() {
@@ -31,14 +30,6 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {/* {error ? (
-            <div className="main__gallery--errorMsg">
-              Oups ! Une erreur s'est produite ...
-            </div>
-          ) : (
-            <Gallery accomodation={data} />
-          )} */}
-          {/* {isLoading ? <Loader /> : <Gallery accomodation={data} />} */}
           {error && (
             <div className="main__gallery--errorMsg">
               Oups ! Une erreur s'est produite ...
