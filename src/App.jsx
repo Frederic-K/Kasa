@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/logement/:id" element={<Accommodation />} />
+        <Route path="/accomodation/:id" element={<Accommodation />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

@@ -1,0 +1,25 @@
+.main {
+  &__aboutBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &--img {
+      width: 100%;
+      max-width: 1240px;
+    }
+    &--imgMobile {
+      display: none;
+    }
+    @include medium;
+    @include small {
+      &--img {
+        display: none;
+      }
+      &--imgMobile {
+        max-width: 300px;
+        display: flex;
+      }
+    }
+  }
+}
