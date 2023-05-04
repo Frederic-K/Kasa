@@ -1,15 +1,33 @@
 import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
 import Loader from '../components/Loader/Loader'
-import Gallery from '../components/Gallery/Gallery'
 import Footer from '../components/Footer/Footer'
-import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
+import Card from '../components/Card/Card'
+
+import useFetch from '../utils/hooks/getData'
+
+import test from '../data/logements.json'
 
 function Home() {
-  const { isLoading, data, error } = useGetAccomodationData()
-  console.log('error', error)
-  console.log('isLoading', isLoading)
-  console.log('data', data)
+  console.log('testJSON', test)
+
+  const { data, isLoading, error } = useFetch('../data/logements.json')
+
+  // console.log('fetchData', data)
+  // const { data, isLoading, error } = useFetch(test)
+
+  const accomodationList = data?.accomodationList
+
+  if (error) {
+    return (
+      <section className="main__gallery">
+        <div className="main__gallery--errorMsg">
+          Oups ! Une erreur s'est produite ...
+        </div>
+      </section>
+    )
+  }
+
   return (
     <div>
       <main>
@@ -30,17 +48,27 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {error && (
+          {/* {error && (
             <div className="main__gallery--errorMsg">
               Oups ! Une erreur s'est produite ...
             </div>
-          )}
-          {isLoading && (
+          )} */}
+          {isLoading ? (
             <div className="loader-center">
               <Loader />
             </div>
+          ) : (
+            <div className="main__gallery--cards">
+              {accomodationList.map((card) => (
+                <Card
+                  key={`card-${card.id}`}
+                  id={`${card.id}`}
+                  cover={card.cover}
+                  title={card.title}
+                />
+              ))}
+            </div>
           )}
-          {!error && !isLoading && data && <Gallery data={data} />}
         </section>
       </main>
       <Footer />
