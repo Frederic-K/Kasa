@@ -1,7 +1,8 @@
-import useGetData from './getData'
+// import { useFetch } from './getData'
+import useFetch from './getData'
 
 function useGetAccomodationData() {
-  const { isLoading, data, error } = useGetData('../../data/logements.json')
+  const { isLoading, data, error } = useFetch('../../data/logements.json')
   return { isLoading, data, error }
 }
 
