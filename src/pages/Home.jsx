@@ -9,6 +9,8 @@ import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
 function Home() {
   const { isLoading, data, error } = useGetAccomodationData()
   console.log('error', error)
+  console.log('isLoading', isLoading)
+  console.log('data', data)
   return (
     <div>
       <main>

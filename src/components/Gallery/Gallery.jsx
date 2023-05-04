@@ -5,8 +5,8 @@ function Gallery({ accomodation }) {
     <main>
       <section className="gallery">
         <ul className="gallery__thumb">
-          {accomodation.map((item) => (
-            <Card key={item.id} item={item} />
+          {accomodation.map((card) => (
+            <Card key={card.id} card={card} />
           ))}
         </ul>
       </section>
