@@ -2,7 +2,7 @@
   .main {
     &__errorPage {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
       &--type {
@@ -10,15 +10,25 @@
         font-weight: 700;
         padding-top: 6rem;
         padding-bottom: 4rem;
+        margin: 0px;
+        @include small {
+          font-size: 8rem;
+          margin-top: 100px;
+        }
       }
       &--title {
         font-size: 2rem;
         text-align: center;
+        margin: 0px;
+        @include small {
+          font-size: 1.5rem;
+        }
       }
       &--link {
         font-size: 1rem;
         padding-top: 10rem;
         text-decoration: underline;
+        margin: 0px;
       }
     }
   }
@@ -34,13 +44,13 @@
 }
 
 @mixin homeBanner-mobile {
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 375px) {
     justify-content: flex-start;
     &--img {
       display: none;
     }
     &--imgMobile {
-      max-width: 300px;
+      max-width: 335px;
       display: flex;
     }
     &--title {
@@ -65,11 +75,11 @@
 
 @mixin small {
   $breakpoints: (
-    small: 320px,
+    small: 375px,
   );
   @media screen and (max-width: map-get($breakpoints, small)) {
     // max-width: 300px; >> ne fct pas ???
-    width: 300px;
+    width: 335px;
     @content;
   }
 }
