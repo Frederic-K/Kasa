@@ -22,7 +22,8 @@ function Dropdown({ title, content }) {
           isOpen ? 'dropdown__content--open' : 'dropdown__content--close'
         }
       >
-        {typeof content !== 'object' ? (
+        {/* If content is a string show content, otherwise generate a list  */}
+        {typeof content === 'string' ? (
           <div>{content}</div>
         ) : (
           <ul>

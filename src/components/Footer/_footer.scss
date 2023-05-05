@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    bottom: 0px;
     &--logo {
       margin: 2rem 0rem 2rem 0rem;
     }
@@ -14,8 +13,7 @@
       color: white;
       margin-bottom: 1.5rem;
     }
-    // @include footer-tab;
-    // @include footer-mobile;
+    @include medium;
     @include small {
       height: 150px;
       gap: 15px;
@@ -28,6 +26,5 @@
         margin: 0px;
       }
     }
-    @include medium;
   }
 }
