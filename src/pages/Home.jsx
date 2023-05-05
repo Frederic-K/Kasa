@@ -2,7 +2,7 @@ import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
 import Loader from '../components/Loader/Loader'
 import Footer from '../components/Footer/Footer'
-import useFetch from '../utils/hooks/getData'
+import useFetch from '../utils/API/getData'
 import Gallery from '../components/Gallery/Gallery'
 
 function Home() {
