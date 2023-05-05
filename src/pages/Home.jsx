@@ -2,21 +2,11 @@ import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
 import Loader from '../components/Loader/Loader'
 import Footer from '../components/Footer/Footer'
-import Card from '../components/Card/Card'
-
 import useFetch from '../utils/hooks/getData'
-
-import test from '../data/logements.json'
+import Gallery from '../components/Gallery/Gallery'
 
 function Home() {
-  console.log('testJSON', test)
-
   const { data, isLoading, error } = useFetch('../data/logements.json')
-
-  // console.log('fetchData', data)
-  // const { data, isLoading, error } = useFetch(test)
-
-  const accomodationList = data?.accomodationList
 
   if (error) {
     return (
@@ -27,7 +17,6 @@ function Home() {
       </section>
     )
   }
-
   return (
     <div>
       <main>
@@ -48,25 +37,13 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {/* {error && (
-            <div className="main__gallery--errorMsg">
-              Oups ! Une erreur s'est produite ...
-            </div>
-          )} */}
           {isLoading ? (
             <div className="loader-center">
               <Loader />
             </div>
           ) : (
             <div className="main__gallery--cards">
-              {accomodationList.map((card) => (
-                <Card
-                  key={`card-${card.id}`}
-                  id={`${card.id}`}
-                  cover={card.cover}
-                  title={card.title}
-                />
-              ))}
+              <Gallery data={data} />
             </div>
           )}
         </section>
