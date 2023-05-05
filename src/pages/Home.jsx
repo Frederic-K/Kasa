@@ -6,6 +6,7 @@ import useFetch from '../utils/hooks/getData'
 import Gallery from '../components/Gallery/Gallery'
 
 function Home() {
+  // const { data, isLoading, error } = useFetch('../data/logements.json')
   const { data, isLoading, error } = useFetch('../data/logements.json')
 
   if (error) {
