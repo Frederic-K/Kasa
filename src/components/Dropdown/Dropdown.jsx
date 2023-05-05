@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import arrowUp from '../../assets/icons/arrowUp.svg'
 import arrowDown from '../../assets/icons/arrowDown.svg'
 
 function Dropdown({ title, content }) {
@@ -8,22 +7,14 @@ function Dropdown({ title, content }) {
 
   return (
     <div className="dropdown">
-      <button
-        type="button"
-        className={isOpen ? 'dropdown__btn--open' : 'dropdown__btn--close'}
-        data-status={isOpen ? 'close' : 'open'}
-        onClick={onToggle}
-      >
-        <span className="dropdown__title">{title}</span>
+      <button type="button" className="dropdown__btn" onClick={onToggle}>
+        <span className="dropdown__btn--title">{title}</span>
         <img
-          className="dropdown__btn--iconDown"
+          className={
+            isOpen ? 'dropdown__btn--iconOpen' : 'dropdown__btn--iconClose'
+          }
           src={arrowDown}
           alt="icone flèche bas"
-        />
-        <img
-          className="dropdown__btn--iconUp"
-          src={arrowUp}
-          alt="icone flèche haut"
         />
       </button>
       <div

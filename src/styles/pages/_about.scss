@@ -8,4 +8,13 @@
       max-width: 1240px;
     }
   }
+  &__aboutInfos {
+    max-width: 1023px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 31px 0px 31px 0px;
+    gap: 30px;
+  }
 }
