@@ -24,6 +24,7 @@
       margin: 0px;
       transform: rotate(0deg);
       transition: transform 350ms ease-out;
+      cursor: pointer;
       @include small {
         width: 15px;
       }
@@ -32,6 +33,7 @@
       margin: 0px;
       transform: rotate(180deg);
       transition: transform 350ms ease-out;
+      cursor: pointer;
       @include small {
         width: 15px;
       }
