@@ -19,7 +19,7 @@ function Home() {
     )
   }
   return (
-    <div>
+    <div className="container">
       <main>
         <div className="main__homeBanner">
           <img
