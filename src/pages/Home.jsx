@@ -1,17 +1,25 @@
 import homeBanner from '../assets/picture/homeBanner.svg'
 import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
 import Loader from '../components/Loader/Loader'
-import Gallery from '../components/Gallery/Gallery'
 import Footer from '../components/Footer/Footer'
-import useGetAccomodationData from '../utils/hooks/getDataAccomodation'
+import useFetch from '../utils/API/getData'
+import Gallery from '../components/Gallery/Gallery'
 
 function Home() {
-  const { isLoading, data, error } = useGetAccomodationData()
-  console.log('error', error)
-  console.log('isLoading', isLoading)
-  console.log('data', data)
+  // const { data, isLoading, error } = useFetch('../data/logements.json')
+  const { data, isLoading, error } = useFetch('../data/logements.json')
+
+  if (error) {
+    return (
+      <section className="main__gallery">
+        <div className="main__gallery--errorMsg">
+          Oups ! Une erreur s'est produite ...
+        </div>
+      </section>
+    )
+  }
   return (
-    <div>
+    <div className="container">
       <main>
         <div className="main__homeBanner">
           <img
@@ -30,17 +38,15 @@ function Home() {
           </h1>
         </div>
         <section className="main__gallery">
-          {error && (
-            <div className="main__gallery--errorMsg">
-              Oups ! Une erreur s'est produite ...
-            </div>
-          )}
-          {isLoading && (
+          {isLoading ? (
             <div className="loader-center">
               <Loader />
             </div>
+          ) : (
+            <div className="main__gallery--cards">
+              <Gallery data={data} />
+            </div>
           )}
-          {!error && !isLoading && data && <Gallery data={data} />}
         </section>
       </main>
       <Footer />

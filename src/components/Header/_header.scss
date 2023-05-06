@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    margin-bottom: 68px;
+    margin-bottom: 60px;
   }
   &__logo {
     margin: 0px;
@@ -23,18 +23,16 @@
       }
     }
   }
-  // @include header-tab;
-  // @include header-mobile;
   @include medium {
     max-width: 748px;
     &__container {
-      margin: 10px;
+      margin: 20px;
       padding: 0px;
     }
   }
   @include small {
     &__container {
-      margin: 10px;
+      margin: 20px;
       padding: 0px;
     }
     &__logo {
