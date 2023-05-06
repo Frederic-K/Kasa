@@ -7,7 +7,7 @@ function Dropdown({ title, content }) {
 
   return (
     <div className="dropdown">
-      <button type="button" className="dropdown__btn" onClick={onToggle}>
+      <button type="button" className="dropdown__btn">
         <span className="dropdown__btn--title">{title}</span>
         <img
           className={
@@ -15,6 +15,7 @@ function Dropdown({ title, content }) {
           }
           src={arrowDown}
           alt="icone flèche bas"
+          onClick={onToggle}
         />
       </button>
       <div
