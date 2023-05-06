@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer'
 
 function About() {
   return (
-    <div>
+    <div className="container">
       <main className="main__about">
         <div className="main__aboutBanner">
           <img

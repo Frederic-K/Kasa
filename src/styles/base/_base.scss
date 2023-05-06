@@ -5,10 +5,18 @@
   text-decoration: none;
 }
 
-main {
+.container {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
+
+// #root {
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+//   //justify-content: flex-start;
+//   align-items: center;
+// }
