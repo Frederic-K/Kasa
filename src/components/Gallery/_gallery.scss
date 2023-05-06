@@ -1,0 +1,14 @@
+.main {
+  &__gallery {
+    max-width: 1240px;
+    background-color: $colour-bckgd;
+    border-radius: $border-rad;
+    margin-top: 43px;
+    &--cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
