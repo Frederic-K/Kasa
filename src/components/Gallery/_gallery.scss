@@ -15,14 +15,19 @@
 
 .main {
   &__gallery {
-    max-width: 1240px;
-    background-color: $colour-bckgd;
-    border-radius: $border-rad;
-    margin-top: 43px;
-    margin-bottom: 2rem;
-    @include small {
-      margin-top: 20px;
-      background-color: white;
+    &--thumb {
+      max-width: 1240px;
+      background-color: $colour-bckgd;
+      border-radius: $border-rad;
+      margin-top: 43px;
+      margin-bottom: 2rem;
+      @include large {
+        margin: 20px;
+      }
+      @include small {
+        margin-top: 20px;
+        background-color: white;
+      }
     }
     &--cards {
       max-width: 1240px;
