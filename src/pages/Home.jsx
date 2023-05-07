@@ -37,13 +37,13 @@ function Home() {
             partout et ailleurs
           </h1>
         </div>
-        <section className="main__gallery">
+        <section className="main__gallery--container">
           {isLoading ? (
             <div className="loader-center">
               <Loader />
             </div>
           ) : (
-            <div className="main__gallery--cards">
+            <div className="main__gallery--thumb">
               <Gallery data={data} />
             </div>
           )}

@@ -64,6 +64,16 @@
   }
 }
 
+@mixin large {
+  $breakpoints: (
+    medium: 1024px,
+  );
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    max-width: 1024px;
+    @content;
+  }
+}
+
 @mixin medium {
   $breakpoints: (
     medium: 768px,
