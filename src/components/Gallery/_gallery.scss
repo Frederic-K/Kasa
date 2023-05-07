@@ -19,6 +19,7 @@
     background-color: $colour-bckgd;
     border-radius: $border-rad;
     margin-top: 43px;
+    margin-bottom: 2rem;
     @include small {
       margin-top: 20px;
       background-color: white;
@@ -29,8 +30,10 @@
       place-items: center;
       grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
       grid-template-rows: repeat(3, auto);
-      grid-gap: 3.5rem;
+      grid-gap: 3rem;
+      padding: 2rem;
       @include large {
+        padding: 50px;
         grid-gap: 4rem;
       }
       @include medium {
@@ -40,6 +43,7 @@
       @include small {
         grid-template-columns: auto;
         grid-gap: 1.2rem;
+        padding: 0px;
       }
     }
   }
