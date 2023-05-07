@@ -4,6 +4,10 @@
     height: 340px;
     border-radius: 10px;
     background-color: $colour-primary;
+    // @include medium {
+    //   width: 335px;
+    //   height: 255px;
+    // }
     @include small {
       width: 335px;
       height: 255px;
