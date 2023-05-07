@@ -35,6 +35,12 @@
   }
 }
 
+@mixin homeBanner-laptop {
+  @media screen and (max-width: 1024px) {
+    padding: 0px 20px 0px 20px;
+  }
+}
+
 @mixin homeBanner-tab {
   @media screen and (max-width: 768px) {
     max-width: 748px;
@@ -66,9 +72,9 @@
 
 @mixin large {
   $breakpoints: (
-    medium: 1024px,
+    laptop: 1024px,
   );
-  @media screen and (max-width: map-get($breakpoints, medium)) {
+  @media screen and (max-width: map-get($breakpoints, laptop)) {
     max-width: 1024px;
     @content;
   }
@@ -76,19 +82,24 @@
 
 @mixin medium {
   $breakpoints: (
-    medium: 768px,
+    tablet: 768px,
+    // mobile-L: 425px,
   );
-  @media screen and (max-width: map-get($breakpoints, medium)) {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
     max-width: 748px;
     @content;
   }
+  // @media screen and (max-width: map-get($breakpoints, mobile-L)) {
+  //   width: 425px;
+  //   @content;
+  // }
 }
 
 @mixin small {
   $breakpoints: (
-    small: 375px,
+    mobile-M: 375px,
   );
-  @media screen and (max-width: map-get($breakpoints, small)) {
+  @media screen and (max-width: map-get($breakpoints, mobile-M)) {
     // max-width: 300px; >> ne fct pas ???
     width: 335px;
     @content;

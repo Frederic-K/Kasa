@@ -20,6 +20,7 @@
         display: none;
       }
     }
+    @include homeBanner-laptop;
     @include homeBanner-tab;
     @include homeBanner-mobile;
   }
