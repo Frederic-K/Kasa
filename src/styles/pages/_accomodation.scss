@@ -1,0 +1,10 @@
+.main {
+  &__accomodation {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

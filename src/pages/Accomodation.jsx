@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer'
 import Loader from '../components/Loader/Loader'
 import Error404 from '../pages/Error404'
 import useFetch from '../utils/API/getData'
+import Carousel from '../components/Carousel/Carousel'
 
 function Accomodation() {
   const { id } = useParams()
@@ -20,7 +21,8 @@ function Accomodation() {
   }
 
   if (!error && !isLoading && data) {
-    const accommodation = data.find((el) => el.id === id)
+    const accomodationData = data.find((el) => el.id === id)
+    // const accomodationData = data.filter((el) => el.id === id)
 
     const {
       title,
@@ -31,15 +33,27 @@ function Accomodation() {
       location,
       equipments,
       tags,
-    } = accommodation
+    } = accomodationData
 
     return (
-      <div>
-        <main>
-          <div>Slider {pictures}</div>
-          <div>Caption {(title, host, rating, location, tags)}</div>
-          <div>Dropdown {description}</div>
-          <div>Dropdown {equipments}</div>
+      <div className="container">
+        <main className="main__accomodation">
+          <div className="main__accomodation--carousel">
+            {/* Carousel {pictures} */}
+            <Carousel pictures={pictures} />
+          </div>
+          {/* ou bien je passe directement accomodationData ??? */}
+          <div className="main__accomodation--caption">
+            Caption {(title, host, rating, location, tags)}
+          </div>
+          <div className="main__accomodation--dropdowns">
+            <div className="main__accomodation--dropdown">
+              Dropdown {description}
+            </div>
+            <div className="main__accomodation--dropdown">
+              Dropdown {equipments}
+            </div>
+          </div>
         </main>
         <Footer />
       </div>
