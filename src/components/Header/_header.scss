@@ -30,12 +30,14 @@
   }
   @include medium {
     &__container {
+      width: 748px;
       margin: 20px;
       padding: 0px;
     }
   }
   @include small {
     &__container {
+      width: 335px;
       margin: 20px;
       padding: 0px;
     }

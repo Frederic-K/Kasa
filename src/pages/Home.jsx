@@ -11,7 +11,7 @@ function Home() {
 
   if (error) {
     return (
-      <section className="main__gallery">
+      <section className="main__gallery--cards">
         <div className="main__gallery--errorMsg">
           Oups ! Une erreur s'est produite ...
         </div>

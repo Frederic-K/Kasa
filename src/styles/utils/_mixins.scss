@@ -95,14 +95,12 @@
   //   @content;
   // }
 }
-
 @mixin small {
   $breakpoints: (
     mobile-M: 375px,
   );
   @media screen and (max-width: map-get($breakpoints, mobile-M)) {
-    // max-width: 300px; >> ne fct pas ???
-    width: 335px;
+    max-width: 355px;
     @content;
   }
 }
