@@ -21,14 +21,14 @@ function Carousel({ data }) {
         return (
           <div className="carousel__container" key={`pix-${index}`}>
             {index === currentPix && (
-              <div className="carousel__pix">
-                <img src={pix} alt={`${title}`} />
+              <div>
+                <div className="carousel__pix">
+                  <img src={pix} alt={`${title}`} />
+                </div>
+                <span className="carousel__counter">
+                  {index + 1}/{pictures.length}
+                </span>
               </div>
-            )}
-            {index === currentPix && (
-              <span className="carousel__counter">
-                {index + 1}/{pictures.length}
-              </span>
             )}
           </div>
         )
