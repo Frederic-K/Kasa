@@ -34,20 +34,24 @@ function Carousel({ data }) {
         )
       })}
       <div>
-        <button type="button" onClick={handlePrevious}>
-          <img
-            className="carousel__arrowPrevious"
-            src={arrowPrevious}
-            alt="Bouton précédent"
-          />
-        </button>
-        <button type="button" onClick={handleNext}>
-          <img
-            className="carousel__arrowNext"
-            src={arrowNext}
-            alt="Bouton suivant"
-          />
-        </button>
+        {pictures.length > 1 && (
+          <button type="button" onClick={handlePrevious}>
+            <img
+              className="carousel__arrowPrevious"
+              src={arrowPrevious}
+              alt="Bouton précédent"
+            />
+          </button>
+        )}
+        {pictures.length > 1 && (
+          <button type="button" onClick={handleNext}>
+            <img
+              className="carousel__arrowPrevious"
+              src={arrowNext}
+              alt="Bouton suivant"
+            />
+          </button>
+        )}
       </div>
     </section>
   )
