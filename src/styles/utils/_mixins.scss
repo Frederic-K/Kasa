@@ -35,6 +35,18 @@
   }
 }
 
+@mixin sliderArrow {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 25px;
+  @include small {
+    img {
+      width: 12px;
+    }
+  }
+}
+
 @mixin homeBanner-laptop {
   @media screen and (max-width: 1024px) {
     padding: 0px 20px 0px 20px;

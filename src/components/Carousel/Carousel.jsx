@@ -15,6 +15,16 @@ function Carousel({ data }) {
       ? setCurrentPix(currentPix + 1)
       : setCurrentPix(0)
 
+  //   const handelMoveSlide = (direction) => {
+  //     if (currentPix === 0) {
+  //       setCurrentPix(pictures.length + direction)
+  //     } else if (currentPix < pictures.length - 1) {
+  //       setCurrentPix(currentPix + direction)
+  //     } else {
+  //       setCurrentPix(0)
+  //     }
+  //   }
+
   return (
     <section className="carousel">
       {pictures.map((pix, index) => {
@@ -34,22 +44,38 @@ function Carousel({ data }) {
         )
       })}
       {pictures.length > 1 && (
-        <div>
-          <button type="button" onClick={handlePrevious}>
-            <img
-              className="carousel__arrowPrevious"
-              src={arrowPrevious}
-              alt="Bouton précédent"
-            />
+        <div className="carousel__button">
+          <button
+            type="button"
+            className="carousel__button--arrowPrevious"
+            onClick={handlePrevious}
+          >
+            <img src={arrowPrevious} alt="Bouton précédent" />
           </button>
-          <button type="button" onClick={handleNext}>
-            <img
-              className="carousel__arrowPrevious"
-              src={arrowNext}
-              alt="Bouton suivant"
-            />
+          <button
+            type="button"
+            className="carousel__button--arrowNext"
+            onClick={handleNext}
+          >
+            <img src={arrowNext} alt="Bouton suivant" />
           </button>
         </div>
+        // <div>
+        //   <button type="button" onClick={handelMoveSlide(-1)}>
+        //     <img
+        //       className="carousel__arrowPrevious"
+        //       src={arrowPrevious}
+        //       alt="Bouton précédent"
+        //     />
+        //   </button>
+        //   <button type="button" onClick={handelMoveSlide(1)}>
+        //     <img
+        //       className="carousel__arrowPrevious"
+        //       src={arrowNext}
+        //       alt="Bouton suivant"
+        //     />
+        //   </button>
+        // </div>
       )}
     </section>
   )

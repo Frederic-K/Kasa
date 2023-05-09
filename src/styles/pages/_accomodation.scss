@@ -6,5 +6,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -40px;
+    @include small {
+      margin-top: 0px;
+    }
+    &--carousel {
+      width: 100%;
+    }
   }
 }
