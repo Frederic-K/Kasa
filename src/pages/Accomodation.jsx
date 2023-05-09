@@ -26,7 +26,7 @@ function Accomodation() {
 
     const {
       title,
-      pictures,
+      // pictures,
       description,
       host,
       rating,
@@ -40,7 +40,7 @@ function Accomodation() {
         <main className="main__accomodation">
           <div className="main__accomodation--carousel">
             {/* Carousel {pictures} */}
-            <Carousel pictures={pictures} />
+            <Carousel data={accomodationData} />
           </div>
           {/* ou bien je passe directement accomodationData ??? */}
           <div className="main__accomodation--caption">
