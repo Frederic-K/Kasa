@@ -9,9 +9,17 @@ function Accomodation() {
   const location = useLocation()
   // const state = location.state
   const { state } = location
-  // console.log('toto', state.accomodationDatas)
+  console.log('toto', state.accomodationDatas)
 
   const accomodationData = state.accomodationDatas
+  console.log('grominé', accomodationData)
+  console.log('tutu', accomodationData.pictures)
+  console.log('tete', accomodationData.equipments)
+  console.log('titi', state.accomodationDatas.equipments)
+  console.log('test', accomodationData.tags)
+
+  const { equipments } = accomodationData
+  console.log('tata', equipments)
 
   if (state.accomodationDatas) {
     return (
@@ -31,7 +39,7 @@ function Accomodation() {
             <div className="main__accomodation--dropdown">
               <Dropdown
                 title="Equipement"
-                content={`${accomodationData.equipments}`}
+                content={accomodationData.equipments}
               />
             </div>
           </div>

@@ -4,19 +4,21 @@ import Loader from '../components/Loader/Loader'
 import Footer from '../components/Footer/Footer'
 import useFetch from '../utils/API/getData'
 import Gallery from '../components/Gallery/Gallery'
+import Error404 from './Error404'
 
 function Home() {
   // const { data, isLoading, error } = useFetch('../data/logements.json')
   const { data, isLoading, error } = useFetch('../data/logements.json')
 
   if (error) {
-    return (
-      <section className="main__gallery--cards">
-        <div className="main__gallery--errorMsg">
-          Oups ! Une erreur s'est produite ...
-        </div>
-      </section>
-    )
+    return <Error404 />
+    // return (
+    //   <section className="main__gallery--cards">
+    //     <div className="main__gallery--errorMsg">
+    //       Oups ! Une erreur s'est produite ...
+    //     </div>
+    //   </section>
+    // )
   }
   return (
     <div className="container">
