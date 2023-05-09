@@ -6,9 +6,10 @@ function Gallery({ data }) {
       {data.map((card) => (
         <Card
           key={`card-${card.id}`}
-          id={`${card.id}`}
-          cover={card.cover}
-          title={card.title}
+          // id={`${card.id}`}
+          // cover={card.cover}
+          // title={card.title}
+          data={card}
         />
       ))}
     </div>

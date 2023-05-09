@@ -33,8 +33,8 @@ function Carousel({ data }) {
           </div>
         )
       })}
-      <div>
-        {pictures.length > 1 && (
+      {pictures.length > 1 && (
+        <div>
           <button type="button" onClick={handlePrevious}>
             <img
               className="carousel__arrowPrevious"
@@ -42,8 +42,6 @@ function Carousel({ data }) {
               alt="Bouton précédent"
             />
           </button>
-        )}
-        {pictures.length > 1 && (
           <button type="button" onClick={handleNext}>
             <img
               className="carousel__arrowPrevious"
@@ -51,8 +49,8 @@ function Carousel({ data }) {
               alt="Bouton suivant"
             />
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   )
 }

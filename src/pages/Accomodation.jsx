@@ -1,35 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import Footer from '../components/Footer/Footer'
-import Loader from '../components/Loader/Loader'
 import Error404 from '../pages/Error404'
-import useFetch from '../utils/API/getData'
 import Carousel from '../components/Carousel/Carousel'
 import Dropdown from '../components/Dropdown/Dropdown'
+import { useLocation } from 'react-router-dom'
 
 function Accomodation() {
-  const { id } = useParams()
-  const { data, isLoading, error } = useFetch('../data/logements.json')
+  const location = useLocation()
+  // const state = location.state
+  const { state } = location
+  // console.log('toto', state.accomodationDatas)
 
-  // console.log('data', data)
+  const accomodationData = state.accomodationDatas
 
-  if (error || !data) {
-    return <Error404 />
-  }
-
-  if (isLoading) {
-    return (
-      <div className="loader-center">
-        <Loader />
-      </div>
-    )
-  }
-
-  if (!error && !isLoading && data) {
-    const accomodationData = data.find((el) => el.id === id)
-
-    console.log('description', accomodationData.description)
-
+  if (state.accomodationDatas) {
     return (
       <div className="container">
         <main className="main__accomodation">
@@ -47,7 +31,7 @@ function Accomodation() {
             <div className="main__accomodation--dropdown">
               <Dropdown
                 title="Equipement"
-                content={`${accomodationData.description}`}
+                content={`${accomodationData.equipments}`}
               />
             </div>
           </div>
@@ -55,6 +39,8 @@ function Accomodation() {
         <Footer />
       </div>
     )
+  } else {
+    return <Error404 />
   }
 }
 

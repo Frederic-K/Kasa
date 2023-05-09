@@ -1,14 +1,19 @@
 import { NavLink } from 'react-router-dom'
 
-function Card({ id, cover, title }) {
+function Card({ data }) {
   return (
     <article className="card__accomodation">
-      <NavLink className="card__acccomodation--link" to={`/accomodation/${id}`}>
+      <NavLink
+        className="card__acccomodation--link"
+        to={`/accomodation/${data.id}`}
+        state={{ accomodationDatas: data }}
+        // state={{ test404: data }}
+      >
         <div className="card__accomodation--img">
-          <img src={cover} alt={`Lien vers l'hébergement ${title}`} />
+          <img src={data.cover} alt={`Lien vers l'hébergement ${data.title}`} />
         </div>
         <div className="card__accomodation--caption">
-          <h3>{title}</h3>
+          <h3>{data.title}</h3>
         </div>
       </NavLink>
     </article>
