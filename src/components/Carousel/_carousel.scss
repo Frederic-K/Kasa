@@ -1,15 +1,23 @@
 .carousel {
   width: 100%;
   position: relative;
+  @include medium;
   &__container {
     width: 100%;
     height: 100%;
+    @include medium {
+      margin-top: 50px;
+    }
   }
   &__pix {
     height: 415px;
     position: relative;
     border-radius: $border-rad;
     overflow: hidden;
+    @include medium {
+      width: 768px;
+      height: 335px;
+    }
     @include small {
       height: 255px;
       img {
@@ -32,7 +40,7 @@
     font-size: 1.3rem;
     color: white;
     padding: 20px;
-    @include small {
+    @include medium {
       display: none;
     }
   }
@@ -49,6 +57,12 @@
     }
     &--arrowNext {
       @include sliderArrow;
+    }
+    @include medium {
+      width: 740px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

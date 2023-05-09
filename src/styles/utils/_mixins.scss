@@ -40,7 +40,12 @@
   background-color: transparent;
   border: none;
   padding: 25px;
-  @include small {
+  // @include small {
+  //   img {
+  //     width: 12px;
+  //   }
+  // }
+  @include medium {
     img {
       width: 12px;
     }
