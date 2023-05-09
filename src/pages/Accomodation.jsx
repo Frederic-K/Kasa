@@ -5,6 +5,7 @@ import Loader from '../components/Loader/Loader'
 import Error404 from '../pages/Error404'
 import useFetch from '../utils/API/getData'
 import Carousel from '../components/Carousel/Carousel'
+import Dropdown from '../components/Dropdown/Dropdown'
 
 function Accomodation() {
   const { id } = useParams()
@@ -17,41 +18,37 @@ function Accomodation() {
   }
 
   if (isLoading) {
-    return <Loader />
+    return (
+      <div className="loader-center">
+        <Loader />
+      </div>
+    )
   }
 
   if (!error && !isLoading && data) {
     const accomodationData = data.find((el) => el.id === id)
-    // const accomodationData = data.filter((el) => el.id === id)
 
-    const {
-      title,
-      // pictures,
-      description,
-      host,
-      rating,
-      location,
-      equipments,
-      tags,
-    } = accomodationData
+    console.log('description', accomodationData.description)
 
     return (
       <div className="container">
         <main className="main__accomodation">
           <div className="main__accomodation--carousel">
-            {/* Carousel {pictures} */}
             <Carousel data={accomodationData} />
           </div>
-          {/* ou bien je passe directement accomodationData ??? */}
-          <div className="main__accomodation--caption">
-            Caption {(title, host, rating, location, tags)}
-          </div>
+          <div className="main__accomodation--caption">Caption</div>
           <div className="main__accomodation--dropdowns">
             <div className="main__accomodation--dropdown">
-              Dropdown {description}
+              <Dropdown
+                title="Description"
+                content={`${accomodationData.description}`}
+              />
             </div>
             <div className="main__accomodation--dropdown">
-              Dropdown {equipments}
+              <Dropdown
+                title="Equipement"
+                content={`${accomodationData.description}`}
+              />
             </div>
           </div>
         </main>
