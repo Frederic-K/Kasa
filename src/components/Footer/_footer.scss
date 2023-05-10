@@ -15,7 +15,9 @@
       color: white;
       margin-bottom: 1.5rem;
     }
-    @include medium;
+    @include medium {
+      width: 748px;
+    }
     @include small {
       height: 150px;
       gap: 15px;
