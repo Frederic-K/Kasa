@@ -31,35 +31,36 @@ function Carousel({ data }) {
         return (
           <div className="carousel__container" key={`pix-${index}`}>
             {index === currentPix && (
-              <div>
-                <div className="carousel__pix">
-                  <img src={pix} alt={`${title}`} />
-                </div>
-                <span className="carousel__counter">
-                  {index + 1}/{pictures.length}
-                </span>
+              <div className="carousel__pix">
+                <img src={pix} alt={`${title}`} />
               </div>
             )}
           </div>
         )
       })}
       {pictures.length > 1 && (
-        <div className="carousel__button">
-          <button
-            type="button"
-            className="carousel__button--arrowPrevious"
-            onClick={handlePrevious}
-          >
-            <img src={arrowPrevious} alt="Bouton précédent" />
-          </button>
-          <button
-            type="button"
-            className="carousel__button--arrowNext"
-            onClick={handleNext}
-          >
-            <img src={arrowNext} alt="Bouton suivant" />
-          </button>
+        <div>
+          <span className="carousel__counter">
+            {currentPix + 1}/{pictures.length}
+          </span>
+          <div className="carousel__button">
+            <button
+              type="button"
+              className="carousel__button--arrowPrevious"
+              onClick={handlePrevious}
+            >
+              <img src={arrowPrevious} alt="Bouton précédent" />
+            </button>
+            <button
+              type="button"
+              className="carousel__button--arrowNext"
+              onClick={handleNext}
+            >
+              <img src={arrowNext} alt="Bouton suivant" />
+            </button>
+          </div>
         </div>
+
         // <div>
         //   <button type="button" onClick={handelMoveSlide(-1)}>
         //     <img
