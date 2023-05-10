@@ -13,5 +13,15 @@
     &--carousel {
       width: 100%;
     }
+    &--dropdowns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &--dropdown {
+      width: 585px;
+      height: 250px;
+      margin: 0px;
+    }
   }
 }

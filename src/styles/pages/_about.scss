@@ -1,6 +1,8 @@
 .main {
   &__about {
     margin: 0px;
+    @include medium;
+    @include small;
   }
   &__aboutBanner {
     display: flex;
@@ -13,7 +15,7 @@
     }
   }
   &__aboutInfos {
-    width: 100%;
+    width: 1023px;
     height: 100%;
     max-width: 1023px;
     display: flex;
@@ -22,5 +24,9 @@
     flex-direction: column;
     padding: 31px 0px 31px 0px;
     gap: 30px;
+    font-size: 1.3rem;
+    @include small {
+      font-size: 0.8rem;
+    }
   }
 }
