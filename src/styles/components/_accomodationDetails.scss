@@ -1,0 +1,17 @@
+.accomodation {
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    &--details {
+      margin-top: 5px;
+      h1 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}

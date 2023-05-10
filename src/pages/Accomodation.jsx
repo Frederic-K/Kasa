@@ -23,7 +23,7 @@ function Accomodation() {
           </div>
           <div className="main__accomodation--infos">
             <section className="accomodation__infos">
-              <div className="accomodation__infos--détails">
+              <div className="accomodation__infos--details">
                 <h1>{accomodationData.title}</h1>
                 <p>{accomodationData.location}</p>
               </div>
@@ -31,17 +31,19 @@ function Accomodation() {
                 <Tags data={accomodationData.tags} />
               </div>
             </section>
-            <section className="accomodation__infos--host">
-              <div className="accomodation__infos--hostName">
-                {accomodationData.host.name}
+            <section className="accomodation__host">
+              <div className="accomodation__host--profil">
+                <div className="accomodation__host--profilName">
+                  {accomodationData.host.name}
+                </div>
+                <div className="accomodation__host--profilPix">
+                  <img
+                    src={accomodationData.host.picture}
+                    alt={accomodationData.host.name}
+                  />
+                </div>
               </div>
-              <div className="accomodation__infos--hostPix">
-                <img
-                  src={accomodationData.host.picture}
-                  alt={accomodationData.host.name}
-                />
-              </div>
-              <div className="accomodation__infos--rating">
+              <div className="accomodation__host--rating">
                 <Rating data={accomodationData.rating} />
               </div>
             </section>
