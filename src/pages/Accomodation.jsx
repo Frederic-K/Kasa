@@ -4,6 +4,8 @@ import Error404 from '../pages/Error404'
 import Carousel from '../components/Carousel/Carousel'
 import Dropdown from '../components/Dropdown/Dropdown'
 import Tags from '../components/Tags/Tags'
+import Rating from '../components/Rating/Rating'
+
 import { useLocation } from 'react-router-dom'
 
 function Accomodation() {
@@ -39,7 +41,9 @@ function Accomodation() {
                   alt={accomodationData.host.name}
                 />
               </div>
-              <div className="accomodation__infos--rating">RATING</div>
+              <div className="accomodation__infos--rating">
+                <Rating data={accomodationData.rating} />
+              </div>
             </section>
           </div>
           <div className="main__accomodation--dropdowns">

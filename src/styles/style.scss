@@ -9,8 +9,10 @@
 @import '../components/Gallery/gallery';
 @import '../components/Header/header';
 @import '../components/Footer/footer';
+@import '../styles/components/accomodationDetails';
 @import '../components/Dropdown/dropdown';
 @import '../components/Carousel/carousel';
 @import '../components/Tags/tags';
+@import '../components/Rating/rating';
 @import './base/base', './base/typo';
 @import './pages/home', './pages/accomodation', './pages/about', './pages/404';
