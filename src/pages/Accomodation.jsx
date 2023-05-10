@@ -3,6 +3,7 @@ import Footer from '../components/Footer/Footer'
 import Error404 from '../pages/Error404'
 import Carousel from '../components/Carousel/Carousel'
 import Dropdown from '../components/Dropdown/Dropdown'
+import Tags from '../components/Tags/Tags'
 import { useLocation } from 'react-router-dom'
 
 function Accomodation() {
@@ -18,7 +19,29 @@ function Accomodation() {
           <div className="main__accomodation--carousel">
             <Carousel data={accomodationData} />
           </div>
-          <div className="main__accomodation--caption">Caption</div>
+          <div className="main__accomodation--infos">
+            <section className="accomodation__infos">
+              <div className="accomodation__infos--détails">
+                <h1>{accomodationData.title}</h1>
+                <p>{accomodationData.location}</p>
+              </div>
+              <div className="accomodation__infos--tags">
+                <Tags data={accomodationData.tags} />
+              </div>
+            </section>
+            <section className="accomodation__infos--host">
+              <div className="accomodation__infos--hostName">
+                {accomodationData.host.name}
+              </div>
+              <div className="accomodation__infos--hostPix">
+                <img
+                  src={accomodationData.host.picture}
+                  alt={accomodationData.host.name}
+                />
+              </div>
+              <div className="accomodation__infos--rating">RATING</div>
+            </section>
+          </div>
           <div className="main__accomodation--dropdowns">
             <div className="main__accomodation--dropdown">
               <Dropdown
