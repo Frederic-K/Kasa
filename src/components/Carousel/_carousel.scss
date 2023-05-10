@@ -63,5 +63,8 @@
       left: 0;
       transform: translateY(-50%);
     }
+    @include small {
+      width: 355px;
+    }
   }
 }

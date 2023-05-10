@@ -21,6 +21,9 @@
             border-radius: 10px;
             background-color: $colour-primary;
             color: white;
+            @include small {
+              font-size: 0.7rem;
+            }
           }
         }
       }

@@ -8,6 +8,9 @@
       h1 {
         font-weight: 500;
         margin-bottom: 10px;
+        @include small {
+          font-size: 1.5rem;
+        }
       }
       p {
         font-weight: 500;
