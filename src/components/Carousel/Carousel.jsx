@@ -4,24 +4,24 @@ import arrowNext from '../../assets/icons/arrowNext.svg'
 
 function Carousel({ data }) {
   const { pictures, title } = data
-  const [currentPix, setCurrentPix] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const handlePrevious = () =>
-    currentPix === 0
-      ? setCurrentPix(pictures.length - 1)
-      : setCurrentPix(currentPix - 1)
+    currentIndex === 0
+      ? setCurrentIndex(pictures.length - 1)
+      : setCurrentIndex(currentIndex - 1)
   const handleNext = () =>
-    currentPix < pictures.length - 1
-      ? setCurrentPix(currentPix + 1)
-      : setCurrentPix(0)
+    currentIndex < pictures.length - 1
+      ? setCurrentIndex(currentIndex + 1)
+      : setCurrentIndex(0)
 
   //   const handelMoveSlide = (direction) => {
-  //     if (currentPix === 0) {
-  //       setCurrentPix(pictures.length + direction)
-  //     } else if (currentPix < pictures.length - 1) {
-  //       setCurrentPix(currentPix + direction)
+  //     if (currentIndex === 0) {
+  //       setCurrentIndex(pictures.length + direction)
+  //     } else if (currentIndex < pictures.length - 1) {
+  //       setCurrentIndex(currentIndex + direction)
   //     } else {
-  //       setCurrentPix(0)
+  //       setCurrentIndex(0)
   //     }
   //   }
 
@@ -30,7 +30,7 @@ function Carousel({ data }) {
       {pictures.map((pix, index) => {
         return (
           <div className="carousel__container" key={`pix-${index}`}>
-            {index === currentPix && (
+            {index === currentIndex && (
               <div className="carousel__pix">
                 <img src={pix} alt={`${title}`} />
               </div>
@@ -41,7 +41,7 @@ function Carousel({ data }) {
       {pictures.length > 1 && (
         <div>
           <span className="carousel__counter">
-            {currentPix + 1}/{pictures.length}
+            {currentIndex + 1}/{pictures.length}
           </span>
           <div className="carousel__button">
             <button
