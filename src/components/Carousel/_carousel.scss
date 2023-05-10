@@ -59,10 +59,9 @@
       @include sliderArrow;
     }
     @include medium {
-      // width: 740px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      width: 748px;
+      left: 0;
+      transform: translateY(-50%);
     }
   }
 }
