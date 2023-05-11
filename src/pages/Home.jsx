@@ -7,7 +7,6 @@ import Gallery from '../components/Gallery/Gallery'
 import Error404 from './Error404'
 
 function Home() {
-  // const { data, isLoading, error } = useFetch('../data/logements.json')
   const { data, isLoading, error } = useFetch('../data/logements.json')
 
   if (error) {
