@@ -47,14 +47,14 @@ function Carousel({ data }) {
             <button
               type="button"
               className="carousel__button--arrowPrevious"
-              onClick={handlePrevious}
+              onClick={() => handlePrevious()}
             >
               <img src={arrowPrevious} alt="Bouton précédent" />
             </button>
             <button
               type="button"
               className="carousel__button--arrowNext"
-              onClick={handleNext}
+              onClick={() => handleNext()}
             >
               <img src={arrowNext} alt="Bouton suivant" />
             </button>
