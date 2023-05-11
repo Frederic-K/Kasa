@@ -4,13 +4,7 @@ function Gallery({ data }) {
   return (
     <div className="main__gallery--cards">
       {data.map((card) => (
-        <Card
-          key={`card-${card.id}`}
-          // id={`${card.id}`}
-          // cover={card.cover}
-          // title={card.title}
-          data={card}
-        />
+        <Card key={`card-${card.id}`} data={card} />
       ))}
     </div>
   )
