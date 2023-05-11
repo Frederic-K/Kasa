@@ -1,6 +1,9 @@
 .dropdown {
   width: 100%;
   height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // margin-bottom: 20px;
   &__btn {
     width: 100%;
     // width: 100%;
@@ -50,8 +53,8 @@
       line-height: 1.5;
       @include medium;
       @include small {
-        // font-size: 0.8rem;
-        padding-bottom: 4rem;
+        padding-left: 15px;
+        padding-bottom: 0px;
       }
       li {
         // font-size: 1.3rem;
