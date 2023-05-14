@@ -6,11 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     margin-bottom: -0.5rem;
     padding: 0.6rem 1rem 0.6rem 1rem;
     border: none;
     border-radius: 5px;
     background-color: $colour-primary;
+    z-index: 10;
     @include medium;
     @include small;
     &--title {
@@ -40,7 +42,7 @@
     &--open {
       height: 100%;
       display: block;
-      opacity: 1;
+      // opacity: 1;
       padding: 2rem 2rem 0.8rem 1rem;
       border-radius: 10px;
       background-color: #f7f7f7;
