@@ -14,8 +14,8 @@ function Dropdown({ title, content }) {
             isOpen ? 'dropdown__btn--iconOpen' : 'dropdown__btn--iconClose'
           }
           src={arrowDown}
-          alt="icone flèche bas"
-          onClick={onToggle}
+          alt="Bouton menu"
+          onClick={() => onToggle()}
         />
       </button>
       <div
