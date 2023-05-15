@@ -33,11 +33,11 @@
       max-width: 1240px;
       display: grid;
       place-items: center;
-      grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
-      grid-template-rows: repeat(3, auto);
+      grid-template-columns: auto auto auto;
       grid-gap: 3rem;
       padding: 2rem;
       @include large {
+        grid-template-columns: auto auto;
         padding: 50px;
         grid-gap: 4rem;
       }
