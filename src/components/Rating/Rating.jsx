@@ -9,12 +9,18 @@ function Rating({ data }) {
     <div className="rating__container">
       {range.map((rangeElem, index) =>
         rating >= rangeElem ? (
-          <div className="rating__icon--fullStar">
-            <img src={FullStar} alt="Etoile pleine" key={`fullStar-${index}`} />
+          <div
+            className="rating__icon--fullStar"
+            key={`fullStar-${rangeElem}-${index}`}
+          >
+            <img src={FullStar} alt="Etoile pleine" />
           </div>
         ) : (
-          <div className="rating__icon--emptyStar">
-            <img src={EmptyStar} alt="Etoile vide" key={`emptyStar-${index}`} />
+          <div
+            className="rating__icon--emptyStar"
+            key={`emptyStar-${rangeElem}-${index}`}
+          >
+            <img src={EmptyStar} alt="Etoile vide" />
           </div>
         )
       )}
