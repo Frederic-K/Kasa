@@ -15,17 +15,11 @@ function Carousel({ data }) {
 
   return (
     <section className="carousel">
-      {pictures.map((pix, index) => {
-        return (
-          <div className="carousel__container" key={`pix-${index}`}>
-            {index === currentIndex && (
-              <div className="carousel__pix">
-                <img src={pix} alt={`${title}`} />
-              </div>
-            )}
-          </div>
-        )
-      })}
+      <div className="carousel__container" key={`pix-${currentIndex}`}>
+        <div className="carousel__pix">
+          <img src={pictures[currentIndex]} alt={`${title}`} />
+        </div>
+      </div>
       {totalSlides > 1 && (
         <div>
           <span className="carousel__counter">
