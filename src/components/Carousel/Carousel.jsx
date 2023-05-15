@@ -5,11 +5,11 @@ import arrowNext from '../../assets/icons/arrowNext.svg'
 function Carousel({ data }) {
   const { pictures, title } = data
   const [currentIndex, setCurrentIndex] = useState(0)
-  const numSlides = pictures.length
+  const totalSlides = pictures.length
 
   const onArrowClick = (direction) => {
     const increment = direction === 'left' ? -1 : 1
-    const newIndex = (currentIndex + increment + numSlides) % numSlides
+    const newIndex = (currentIndex + increment + totalSlides) % totalSlides
     setCurrentIndex(newIndex)
   }
 
@@ -26,10 +26,10 @@ function Carousel({ data }) {
           </div>
         )
       })}
-      {numSlides > 1 && (
+      {totalSlides > 1 && (
         <div>
           <span className="carousel__counter">
-            {currentIndex + 1}/{numSlides}
+            {currentIndex + 1}/{totalSlides}
           </span>
           <div className="carousel__button">
             <button
