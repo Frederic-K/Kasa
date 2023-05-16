@@ -15,9 +15,9 @@ function Carousel({ data }) {
 
   return (
     <section className="carousel">
-      <div className="carousel__container" key={`pix-${currentIndex}`}>
+      <div className="carousel__container">
         <div className="carousel__pix">
-          <img src={pictures[currentIndex]} alt={`${title}`} />
+          <img src={pictures[currentIndex]} alt={`${title}-${currentIndex}`} />
         </div>
       </div>
       {totalSlides > 1 && (

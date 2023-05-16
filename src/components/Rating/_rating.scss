@@ -1,0 +1,29 @@
+.accomodation {
+  &__host {
+    &--rating {
+      margin-right: 0px;
+      margin-left: 0px;
+      .rating__container {
+        display: flex;
+        gap: 15px;
+        @include small {
+          gap: 8px;
+          .rating__icon {
+            &--fullStar {
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+            &--emptyStar {
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

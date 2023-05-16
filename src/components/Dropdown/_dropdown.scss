@@ -45,7 +45,7 @@
       // opacity: 1;
       padding: 2rem 2rem 0.8rem 1rem;
       border-radius: 10px;
-      background-color: #f7f7f7;
+      background-color: $colour-bckgd;
       margin: 0px;
       line-height: 1.5;
       animation: growDown 300ms ease-in-out forwards;
@@ -58,7 +58,7 @@
       ul {
         padding-left: 0px;
         li {
-          background-color: #f7f7f7;
+          background-color: $colour-bckgd;
           list-style: none;
         }
       }

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import 'normalize.css' // import positionné après la cmd yarn add normalize.css ???
+import 'normalize.css'
 import './styles/style.scss'
 import App from './App'
 
