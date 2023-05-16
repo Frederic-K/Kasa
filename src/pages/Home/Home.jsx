@@ -1,10 +1,10 @@
-import homeBanner from '../assets/picture/homeBanner.svg'
-import homeBannerMobile from '../assets/picture/homeBannerMobile.svg'
-import Loader from '../components/Loader/Loader'
-import Footer from '../components/Footer/Footer'
-import useFetch from '../utils/API/getData'
-import Gallery from '../components/Gallery/Gallery'
-import Error404 from './Error404'
+import homeBanner from '../../assets/picture/homeBanner.svg'
+import homeBannerMobile from '../../assets/picture/homeBannerMobile.svg'
+import Loader from '../../components/Loader/Loader'
+import Footer from '../../components/Footer/Footer'
+import useFetch from '../../utils/API/getData'
+import Gallery from '../../components/Gallery/Gallery'
+import Error404 from '../404/Error404'
 
 function Home() {
   const { data, isLoading, error } = useFetch('../data/logements.json')

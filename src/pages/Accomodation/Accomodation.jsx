@@ -1,11 +1,10 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
-import Error404 from '../pages/Error404'
-import Carousel from '../components/Carousel/Carousel'
-import Dropdown from '../components/Dropdown/Dropdown'
-import Tags from '../components/Tags/Tags'
-import Rating from '../components/Rating/Rating'
-
+import Footer from '../../components/Footer/Footer'
+import Error404 from '../404/Error404'
+import Carousel from '../../components/Carousel/Carousel'
+import Dropdown from '../../components/Dropdown/Dropdown'
+import Tags from '../../components/Tags/Tags'
+import Rating from '../../components/Rating/Rating'
 import { useLocation } from 'react-router-dom'
 
 function Accomodation() {

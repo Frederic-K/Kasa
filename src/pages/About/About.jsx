@@ -1,7 +1,7 @@
-import aboutBanner from '../assets/picture/aboutBanner.svg'
-import aboutBannerMobile from '../assets/picture/aboutBannerMobile.svg'
-import Dropdown from '../components/Dropdown/Dropdown'
-import Footer from '../components/Footer/Footer'
+import aboutBanner from '../../assets/picture/aboutBanner.svg'
+import aboutBannerMobile from '../../assets/picture/aboutBannerMobile.svg'
+import Dropdown from '../../components/Dropdown/Dropdown'
+import Footer from '../../components/Footer/Footer'
 
 function About() {
   return (
