@@ -5,13 +5,17 @@
   &__container {
     width: 100%;
     height: 100%;
+    display: flex;
   }
   &__pix {
+    // width: 1024px;
     height: 415px;
     position: relative;
     border-radius: $border-rad;
     overflow: hidden;
-    display: none;
+    // display: none;
+    // visibility: hidden;
+    opacity: 0;
     @include medium {
       width: 768px;
       height: 335px;
@@ -68,5 +72,8 @@
 }
 
 .active {
-  display: flex;
+  // display: flex;
+  // visibility: visible;
+  opacity: 1;
+  min-width: 100%;
 }

@@ -3,8 +3,7 @@ import arrowPrevious from '../../assets/icons/arrowPrevious.svg'
 import arrowNext from '../../assets/icons/arrowNext.svg'
 
 function Carousel({ data }) {
-  // const { pictures, title } = data
-  const { pictures } = data
+  const { pictures, title } = data
   const [currentIndex, setCurrentIndex] = useState(0)
   const totalSlides = pictures.length
 
@@ -28,9 +27,9 @@ function Carousel({ data }) {
                   ? 'carousel__pix active'
                   : 'carousel__pix'
               }
-              key={`pix-${index}${currentIndex}`}
+              key={`pix-${index}`}
             >
-              <img src={pix} alt={`Gallerie du logement-${currentIndex}`} />
+              <img src={pix} alt={`Galerie du logement : ${title}-${index}`} />
             </div>
           )
         })}
