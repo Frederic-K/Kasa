@@ -20,9 +20,7 @@ function Carousel({ data }) {
           return (
             <div
               className={
-                index === currentIndex
-                  ? 'carousel__pix active'
-                  : 'carousel__pix'
+                index === currentIndex ? 'carousel__pix shown' : 'carousel__pix'
               }
               key={`pix-${index}`}
             >
