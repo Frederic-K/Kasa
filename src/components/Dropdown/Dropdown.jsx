@@ -3,7 +3,6 @@ import arrowDown from '../../assets/icons/arrowDown.svg'
 
 function Dropdown({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
-  const onToggle = () => setIsOpen(!isOpen)
 
   return (
     <div className="dropdown">
@@ -15,7 +14,7 @@ function Dropdown({ title, content }) {
           }
           src={arrowDown}
           alt="Bouton menu"
-          onClick={() => onToggle()}
+          onClick={() => setIsOpen(!isOpen)}
         />
       </button>
       <div
@@ -23,7 +22,6 @@ function Dropdown({ title, content }) {
           isOpen ? 'dropdown__content--open' : 'dropdown__content--close'
         }
       >
-        {/* If content is a string show content, otherwise generate a list  */}
         {typeof content === 'string' ? (
           <div>{content}</div>
         ) : (
