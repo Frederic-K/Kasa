@@ -3,6 +3,9 @@
   background-color: transparent;
   border: none;
   padding: 25px;
+  &:hover {
+    transform: scale(1.2);
+  }
   @include medium {
     img {
       width: 12px;
