@@ -8,14 +8,13 @@
     display: flex;
   }
   &__pix {
-    // width: 1024px;
     height: 415px;
     position: relative;
     border-radius: $border-rad;
     overflow: hidden;
-    // display: none;
-    // visibility: hidden;
+    visibility: hidden;
     opacity: 0;
+    transition: visibility 2s 2s, opacity 2s linear;
     @include medium {
       width: 768px;
       height: 335px;
@@ -27,6 +26,7 @@
       }
     }
     img {
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -72,8 +72,8 @@
 }
 
 .active {
-  // display: flex;
-  // visibility: visible;
-  opacity: 1;
   min-width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
 }

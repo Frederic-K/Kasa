@@ -9,3 +9,18 @@
     transform: scaleY(1);
   }
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-400px);
+  }
+  66% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
