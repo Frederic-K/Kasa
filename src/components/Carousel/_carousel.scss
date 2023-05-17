@@ -14,7 +14,7 @@
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 2s 2s, opacity 2s linear;
+    transition: visibility 0s 1s, opacity 1s linear;
     @include medium {
       width: 768px;
       height: 335px;
@@ -75,5 +75,5 @@
   min-width: 100%;
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.5s linear;
+  transition: opacity 1s linear;
 }
