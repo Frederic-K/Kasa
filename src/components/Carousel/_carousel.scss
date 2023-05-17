@@ -11,6 +11,7 @@
     position: relative;
     border-radius: $border-rad;
     overflow: hidden;
+    display: none;
     @include medium {
       width: 768px;
       height: 335px;
@@ -64,4 +65,8 @@
       width: 355px;
     }
   }
+}
+
+.active {
+  display: flex;
 }

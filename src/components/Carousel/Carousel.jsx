@@ -8,6 +8,8 @@ function Carousel({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const totalSlides = pictures.length
 
+  // console.log('data', data)
+
   const onArrowClick = (direction) => {
     const increment = direction === 'left' ? -1 : 1
     const newIndex = (currentIndex + increment + totalSlides) % totalSlides
@@ -17,23 +19,21 @@ function Carousel({ data }) {
   return (
     <section className="carousel">
       <div className="carousel__container">
-        <div className="carousel__pix">
-          {/* <img src={pictures[currentIndex]} alt={`${title}`} /> */}
-          {pictures.map((pix, index) => {
-            return (
-              <div
-                className={index === currentIndex ? 'slide active' : 'slide'}
-                key={`slider-${index}${currentIndex}`}
-              >
-                <img
-                  src={pix}
-                  alt={'accommodation'}
-                  className="slider__picture"
-                />
-              </div>
-            )
-          })}
-        </div>
+        {/* <img src={pictures[currentIndex]} alt={`${title}`} /> */}
+        {pictures.map((pix, index) => {
+          return (
+            <div
+              className={
+                index === currentIndex
+                  ? 'carousel__pix active'
+                  : 'carousel__pix'
+              }
+              key={`pix-${index}${currentIndex}`}
+            >
+              <img src={pix} alt={`Gallerie du logement-${currentIndex}`} />
+            </div>
+          )
+        })}
       </div>
       {totalSlides > 1 && (
         <div>
