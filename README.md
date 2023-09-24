@@ -1,3 +1,31 @@
+Openclassrooms Projet 11 : Développez une application Web avec React et React Router - Site KASA
+
+![banner](./src/assets/kasabanner.png)
+
+Le contexte du projet :
+
+- Mon profil : Développeur Freelance missionné par l'entreprise -Kasa- en tant que Développeur Front-end.
+- L’entreprise : leaders de la location d’appartements entre particuliers en France.
+- La mission : refonte totale du site agé de 10 ans pour passer à une stack complète en JS (NodeJs - React) avec de nouvelles maquettes.
+- L’objectif : démarrer le projet React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes Figma (responsives ).
+
+Cahier des charges :
+
+- Spécifications techniques :
+  - React :
+    - Découpage en composants modulaires et réutilisables
+    - Un composant par fichier
+    - Structure logique des différents fichiers
+    - Utilisation des props entre les composants
+    - Utilisation du state dans les composants quand c'est nécessaire
+    - Gestion des événements
+    - Listes
+  - React Router :
+    - Les paramètres des routes sont gérés par React Router dans l'URL pour récupérer les informations de chaque logement.
+    - Il existe une page par route.
+    - La page 404 est renvoyée pour chaque route inexistante, ou si une valeur présente dans l’URL ne fait pas partie des données renseignées.
+    - La logique du routeur est réunie dans un seul fichier.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
